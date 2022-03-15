@@ -1,0 +1,65 @@
+#Follow user, Follow playlist, listen playlist
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        spotifyweb = driver.find_element_by_xpath('/html/body/div/div/div[2]/div/div/button[2]').click()
+        time.sleep(5)
+        driver.get("https://open.spotify.com/search")
+        time.sleep(8)
+        spotifysearch = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[1]/header/div[3]/div/div/form/input').send_keys(artist)
+        time.sleep(5)
+        try:
+            spotifyselect = driver.find_element_by_class_name('Nqa6Cw3RkDMV8QnYreTr').click()
+        except selenium.common.exceptions.NoSuchElementException:
+            pass
+        time.sleep(5)
+        spotifyfollow = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[3]/div/button[1]').click()
+        time.sleep(5)
+        driver.get(playlist)
+        time.sleep(5)
+        spotifylike = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[2]/div[2]/div/button[2]').click()
+        time.sleep(5)
+        spotifyplay = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[2]/div[2]/div/button[1]').click()
+        time.sleep(v1)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Follow user and playlist
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        spotifyweb = driver.find_element_by_xpath('/html/body/div/div/div[2]/div/div/button[2]').click()
+        time.sleep(5)
+        driver.get("https://open.spotify.com/search")
+        time.sleep(8)
+        spotifysearch = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[1]/header/div[3]/div/div/form/input').send_keys(artist)
+        time.sleep(5)
+        try:
+            spotifyselect = driver.find_element_by_class_name('Nqa6Cw3RkDMV8QnYreTr').click()
+        except selenium.common.exceptions.NoSuchElementException:
+            pass
+        time.sleep(5)
+        spotifyfollow = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[3]/div/button[1]').click()
+        time.sleep(5)
+        driver.get(playlist)
+        time.sleep(5)
+        spotifylike = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[2]/div[2]/div/button[2]').click()
+        time.sleep(5)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Follow user
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        driver.get("https://open.spotify.com/user/ + artist")
+        time.sleep(8)
+        spotifyfollow = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[3]/div/button[1]').click()
+        time.sleep(3)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Follow Playlist
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        driver.get(playlist)
+        time.sleep(5)
+        spotifylike = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[2]/div[2]/div/button[2]').click()
+        time.sleep(3)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Follow and listen playlist
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        driver.get(playlist)
+        time.sleep(5)
+        spotifylike = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[2]/div[2]/div/button[2]').click()
+        time.sleep(5)
+        spotifyplay = driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div[2]/div[2]/div/button[1]').click()
+        time.sleep(v1)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
